@@ -9,9 +9,9 @@ export default function TabLayout() {
   const router = useRouter();
   const { colors } = useContext(ThemeContext);
   const { user } = useAuth();
-  // if (!user) {
-  //   return <Redirect href="/login" />;
-  // }
+  if (!user) {
+    return <Redirect href="/login" />;
+  }
 
   // return <Slot />;
 
@@ -31,11 +31,9 @@ export default function TabLayout() {
           tabBarStyle: {
             padding: 17,
             backgroundColor: colors.tabBar,
-            // borderTopLeftRadius: 15,
-            // borderTopRightRadius: 15,
             position: "relative",
             elevation: 0,
-            height: 60,
+            height: 50,
             shadowOpacity: 0,
             borderTopWidth: 0,
           },
@@ -54,7 +52,7 @@ export default function TabLayout() {
               <Ionicons
                 name={focused ? "home-sharp" : "home-outline"}
                 color={color}
-                size={26}
+                size={23}
               />
             ),
           }}
@@ -67,7 +65,7 @@ export default function TabLayout() {
               <Ionicons
                 name={focused ? "calendar-clear" : "calendar-clear-outline"}
                 color={color}
-                size={26}
+                size={23}
               />
             ),
           }}
@@ -90,7 +88,7 @@ export default function TabLayout() {
               <Ionicons
                 name={focused ? "person" : "person-outline"}
                 color={color}
-                size={26}
+                size={23}
               />
             ),
           }}
@@ -104,7 +102,7 @@ export default function TabLayout() {
               <Ionicons
                 name={focused ? "settings" : "settings-outline"}
                 color={color}
-                size={26}
+                size={23}
               />
             ),
           }}
@@ -118,7 +116,7 @@ export default function TabLayout() {
           router.push("/(tabs)/addTask");
         }}
       >
-        <Ionicons name="add" size={32} color="white" />
+        <Ionicons name="add" size={30} color="white" />
       </TouchableOpacity>
     </View>
   );
@@ -131,11 +129,11 @@ const styles = StyleSheet.create({
   },
   floatingButton: {
     position: "absolute",
-    bottom: 25,
+    bottom: 20,
     alignSelf: "center",
     backgroundColor: "#161f7c",
-    width: 60,
-    height: 60,
+    width: 55,
+    height: 57,
     borderRadius: 30,
     justifyContent: "center",
     alignItems: "center",

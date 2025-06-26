@@ -22,6 +22,12 @@
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
+    "extra": {
+      "vapidNotiKey": "BH7beQ9KDv962Olta-HK3fVHUS2vmG1ySL52q9JiI97PcAOf4lCetiYtdR-1GTc9P8-2edl0SgYy9MTHEu_wYao"
+    },
+    "notification": {
+      "vapidNotiKey": "BH7beQ9KDv962Olta-HK3fVHUS2vmG1ySL52q9JiI97PcAOf4lCetiYtdR-1GTc9P8-2edl0SgYy9MTHEu_wYao"
+    },
     "plugins": [
       "expo-router",
       [
